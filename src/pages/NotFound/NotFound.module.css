@@ -1,0 +1,67 @@
+.NotFound {
+	width: 600px;
+}
+
+.NotFound h1 {
+	margin-top: 70px;
+	color: rgb(215, 2, 2);
+	font-family: 'Baloo Bhai', cursive;
+	font-size: 36px;
+	text-align: center;
+	text-shadow: -1px 1px 1px black;
+}
+
+.NotFound p {
+	color: rgb(215, 2, 2);
+	font-family: 'Baloo Bhai', cursive;
+	font-size: 24px;
+	text-align: center;
+	text-shadow: -1px 1px 1px black;
+}
+
+.NotFound link {
+	color: #027979;
+	font-family: 'Baloo Bhai', cursive;
+	font-size: 24px;
+	text-align: center;
+	transition: color 0.3s;
+}
+
+.NotFound link:hover {
+	color: #f4f4f4;
+}
+
+.center {
+	display: flex;
+	font-size: 1.5rem;
+	font-weight: 600;
+	justify-content: center;
+	padding-top: 40px;
+	text-shadow: -1px 1px 1px black;
+}
+
+.center:hover {
+	opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+	.NotFound {
+		width: 40vh;
+	}
+
+	.NotFound h1 {
+		margin-top: 10px;
+		font-size: 30px;
+		margin-left: -30px;
+	}
+
+	.NotFound p {
+		font-size: 16px;
+		margin: 0 20px 0 -20px;
+	}
+
+	.center {
+		font-size: 1.125rem;
+		margin-left: -30px;
+	}
+}

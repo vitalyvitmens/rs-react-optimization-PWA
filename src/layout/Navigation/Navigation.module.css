@@ -1,0 +1,85 @@
+.Navigation {
+	width: 600px;
+	margin-top: 110px;
+	background-color: rgba(234, 223, 249, 0.5);
+	padding: 10px 20px 50px 20px;
+	width: 600px;
+	height: fit-content;
+	border-radius: 10px;
+	box-shadow: -4px -2px 10px black;
+}
+
+.center {
+	display: flex;
+	justify-content: space-around;
+	font-size: 2rem;
+	font-weight: 700;
+	text-shadow: -1px 1px 1px black;
+}
+
+.authCenter {
+	display: flex;
+	margin: auto;
+	justify-content: space-around;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.imgAnimation {
+	display: block;
+	margin: 0 auto;
+	animation: spin 3s linear infinite;
+	border: 1px solid #084949;
+	border-radius: 50%;
+	box-shadow: -4px -2px 10px black;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.img {
+	display: block;
+	border: 1px solid #084949;
+	border-radius: 50%;
+	box-shadow: -4px -2px 10px black;
+}
+
+@media (max-width: 767px) {
+	.Navigation {
+		width: 80%;
+		margin-top: 25px;
+	}
+
+	.center {
+		font-size: 1.5rem;
+	}
+
+	.img {
+		display: block;
+		border: 1px solid #084949;
+		border-radius: 50%;
+		box-shadow: -4px -2px 10px black;
+		height: 50px;
+		width: 50px;
+	}
+
+	.imgAnimation {
+		display: block;
+		height: 50px;
+		width: 50px;
+		margin: 0 auto;
+		animation: spin 3s linear infinite;
+		border: 1px solid #084949;
+		border-radius: 50%;
+		box-shadow: -2px -1px 10px black;
+	}
+}

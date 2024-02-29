@@ -1,0 +1,135 @@
+.customInput {
+	box-sizing: border-box;
+	text-align: start;
+	font-size: 16px;
+	margin-bottom: 5px;
+	text-shadow: -1px 1px 1px black;
+}
+
+.lable {
+	display: inline-block;
+	line-height: 18.6px;
+	font-size: 12px;
+	font-weight: 500;
+	color: rgb(2, 74, 2);
+	padding: 0.1rem 0.75rem;
+}
+
+.description {
+	display: block;
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.inputField {
+	display: block;
+	color: gray;
+	background-color: bisque;
+	height: 30px;
+	min-height: 30px;
+	padding: 0 10px;
+	width: 340px;
+	font-size: 12px;
+	font-stretch: 100%;
+	font-weight: 400;
+	line-height: 28px;
+	border: 2px solid rgb(2, 74, 2);
+	box-shadow: -4px 3px 5px black;
+	color: rgb(2, 74, 2);
+	text-shadow: -1px 1px 1px black;
+}
+
+.inputField:focus {
+	border: 2px solid #0000ee;
+	outline: none;
+}
+
+.inputField:disabled {
+	background: rgb(248, 216, 216);
+	border-color: rgb(248, 216, 216);
+	box-shadow: none;
+	cursor: not-allowed;
+}
+
+.error {
+	display: block;
+	width: 340px;
+	font-size: 12px;
+	line-height: 14.4px;
+	color: rgb(250, 82, 82);
+}
+
+.inputFieldError {
+	display: block;
+	color: rgb(250, 82, 82);
+	background-color: rgb(255, 255, 255);
+	height: 30px;
+	min-height: 30px;
+	padding: 0 10px;
+	width: 340px;
+	font-size: 12px;
+	font-stretch: 100%;
+	font-weight: 400;
+	line-height: 28px;
+	border: 2px solid rgb(250, 82, 82);
+}
+
+.inputFieldError:focus {
+	border: 2px solid rgb(250, 82, 82);
+	outline: none;
+}
+
+.inputFieldError:disabled {
+	background: rgb(248, 216, 216);
+	border-color: rgb(250, 82, 82);
+	box-shadow: none;
+	cursor: not-allowed;
+}
+
+::placeholder {
+	color: rgb(206, 212, 218);
+}
+
+@media (max-width: 767px) {
+	.customInput {
+    width: 30vh;
+		box-sizing: border-box;
+		text-align: start;
+		font-size: 16px;
+		margin-bottom: 5px;
+		text-shadow: -1px 1px 1px black;
+	}
+
+	.lable {
+		display: inline-block;
+		line-height: 0.1px;
+		font-size: 12px;
+		font-weight: 500;
+		color: rgb(2, 74, 2);
+		padding: 0.1rem 0.75rem;
+	}
+
+	.description {
+		display: block;
+		font-size: 10px;
+		line-height: 12px;
+	}
+
+	.inputField {
+		display: block;
+		color: gray;
+		background-color: bisque;
+		height: 30px;
+		min-height: 30px;
+		padding: 0 10px;
+		width: 30vh;
+		font-size: 12px;
+		font-stretch: 100%;
+		font-weight: 400;
+		line-height: 28px;
+		border: 2px solid rgb(2, 74, 2);
+		box-shadow: -4px 3px 5px black;
+		color: rgb(2, 74, 2);
+		text-shadow: -1px 1px 1px black;
+	}
+}

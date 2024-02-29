@@ -1,0 +1,27 @@
+.Home {
+	width: 600px;
+	padding-bottom: 300px;
+}
+
+.Home h1 {
+	display: flex;
+	color: #016c6c;
+	font-family: 'Baloo Bhai', cursive;
+	font-size: 32px;
+	text-align: center;
+	padding-top: 150px;
+	text-shadow: -1px 1px 1px black;
+}
+
+@media (max-width: 767px) {
+	.Home {
+		width: 40vh;
+	}
+
+	.Home h1 {
+		font-size: 1.5rem;
+		padding-top: 0.1rem;
+		margin-left: -0.5rem;
+		margin-right: -1.5rem;
+	}
+}

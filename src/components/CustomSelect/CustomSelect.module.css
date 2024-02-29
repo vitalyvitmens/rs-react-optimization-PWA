@@ -1,0 +1,49 @@
+.customSelect {
+	box-sizing: border-box;
+	text-align: start;
+	font-size: 16px;
+}
+
+.lable {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px 0;
+	font-family: 'Baloo Bhai', cursive;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: rgb(2, 74, 2);
+}
+
+.selectField {
+	display: block;
+	background-color: bisque;
+	opacity: 0.8;
+	height: 33.2px;
+	min-height: 30px;
+	padding: 0 10px;
+	width: 363.2px;
+	font-size: 16px;
+	font-stretch: 100%;
+	font-weight: 400;
+	line-height: 28px;
+	border: 2px solid rgb(2, 74, 2);
+	border-radius: 5px;
+	text-shadow: -1px 1px 1px black;
+	box-shadow: -4px 3px 5px black;
+}
+
+.selectField:focus {
+	border: 2px solid #0000ee;
+	outline: none;
+}
+
+@media (max-width: 767px) {
+	.lable {
+		font-size: 1.25rem;
+	}
+
+	.selectField {
+		width: 40vh;
+	}
+}

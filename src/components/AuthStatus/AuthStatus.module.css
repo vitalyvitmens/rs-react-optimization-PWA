@@ -1,0 +1,18 @@
+.authStatus {
+	display: flex;
+	gap: 1rem;
+	line-height: 77px;
+	text-shadow: -1px 1px 1px black;
+	font-size: 1.5rem;
+	color: #0000ee;
+}
+
+@media (max-width: 767px) {
+	.authStatus {
+		gap: 0.2rem;
+		line-height: 68px;
+		font-size: 0.9rem;
+    margin-top: -20px;
+    margin-bottom: -15px;
+	}
+}
