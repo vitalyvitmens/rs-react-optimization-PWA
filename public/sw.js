@@ -11,12 +11,14 @@ const ASSETS = [
 ]
 
 // install event
+// eslint-disable-next-line no-restricted-globals
 self.addEventListener('install', async (event) => {
 	const cache = await caches.open(staticCacheName)
 	await cache.addAll(ASSETS)
 })
 
 // activated event
+// eslint-disable-next-line no-restricted-globals
 self.addEventListener('activate', async (event) => {
 	const cachesKeysArr = await caches.keys()
 	await Promise.all(
@@ -27,6 +29,7 @@ self.addEventListener('activate', async (event) => {
 })
 
 // fetch event
+// eslint-disable-next-line no-restricted-globals
 self.addEventListener('fetch', (event) => {
 	event.respondWith(cacheFirst(event.request))
 })
