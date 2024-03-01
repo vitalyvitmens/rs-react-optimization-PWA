@@ -1,6 +1,13 @@
 {
   "hosting": {
-    "public": "build/",
+    "site": "rickandmorty-c6ac8",
+    "public": "build",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/public/index.html"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",

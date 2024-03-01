@@ -2,13 +2,13 @@ const staticCacheName = 'static-site'
 const dynamicCacheName = 'dynamic-site'
 
 const ASSETS = [
-	'/',
-	'/index.html',
-	'/static/',
-	'src/index.css',
-	'src/app.module.css',
-	'src/index.js',
-	'src/App.js',
+	'/rickandmorty-c6ac8/',
+	'/rickandmorty-c6ac8/index.html',
+	'/rickandmorty-c6ac8/static/',
+	'/rickandmorty-c6ac8/src/index.css',
+	'/rickandmorty-c6ac8/src/app.module.css',
+	'/rickandmorty-c6ac8/src/index.js',
+	'/rickandmorty-c6ac8/src/App.js',
 ]
 
 // install event
