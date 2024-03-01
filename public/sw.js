@@ -8,6 +8,10 @@ const ASSETS = [
 	'src/app.module.css',
 	'src/index.js',
 	'src/App.js',
+	'/character?page=1',
+	'/location?page=1',
+	'/episode?page=1',
+	'src/components/AuthStatus/AuthStatus.jsx',
 ]
 
 // install event
@@ -21,7 +25,7 @@ self.addEventListener('install', async (event) => {
 // eslint-disable-next-line no-restricted-globals
 self.addEventListener('activate', async (event) => {
 	const cachesKeysArr = await caches.keys()
-  console.log('####: cachesKeysArr', cachesKeysArr)
+	console.log('####: cachesKeysArr', cachesKeysArr)
 	await Promise.all(
 		cachesKeysArr
 			.filter((key) => key !== staticCacheName && key !== dynamicCacheName)
@@ -58,6 +62,6 @@ async function networkFirst(request) {
 	} catch (error) {
 		console.log('####: error', error)
 		const cached = await cache.match(request)
-		return cached ?? (await caches.match('/src/pages/NotFound/NotFound.jsx'))
+		return cached ?? (await caches.match('/offline.html'))
 	}
 }
