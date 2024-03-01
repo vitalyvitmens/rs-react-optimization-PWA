@@ -4,14 +4,11 @@ const dynamicCacheName = 'dynamic-site'
 const ASSETS = [
 	'/',
 	'/index.html',
+	'/static/',
 	'src/index.css',
 	'src/app.module.css',
 	'src/index.js',
 	'src/App.js',
-	'/character?page=1',
-	'/location?page=1',
-	'/episode?page=1',
-	'src/components/AuthStatus/AuthStatus.jsx',
 ]
 
 // install event
@@ -62,6 +59,6 @@ async function networkFirst(request) {
 	} catch (error) {
 		console.log('####: error', error)
 		const cached = await cache.match(request)
-		return cached ?? (await caches.match('/offline.html'))
+		return cached ?? (await caches.match('src/pages/NotFound/NotFound.jsx'))
 	}
 }
