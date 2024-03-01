@@ -40,10 +40,10 @@
 
 @media (max-width: 767px) {
 	.lable {
-		font-size: 1.25rem;
+		font-size: 1.2rem;
 	}
 
 	.selectField {
-		width: 40vh;
+		width: 45vh;
 	}
 }
