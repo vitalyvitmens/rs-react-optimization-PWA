@@ -2,13 +2,13 @@ const staticCacheName = 'static-site'
 const dynamicCacheName = 'dynamic-site'
 
 const ASSETS = [
-	'/rickandmorty-c6ac8/',
-	'/rickandmorty-c6ac8/index.html',
-	'/rickandmorty-c6ac8/static/',
-	'/rickandmorty-c6ac8/src/index.css',
-	'/rickandmorty-c6ac8/src/app.module.css',
-	'/rickandmorty-c6ac8/src/index.js',
-	'/rickandmorty-c6ac8/src/App.js',
+	'/',
+	'/public/index.html',
+	'/static/',
+	'/src/index.css',
+	'/src/app.module.css',
+	'/src/index.jsx',
+	'/src/App.jsx',
 ]
 
 // install event
@@ -59,6 +59,6 @@ async function networkFirst(request) {
 	} catch (error) {
 		console.log('####: error', error)
 		const cached = await cache.match(request)
-		return cached ?? (await caches.match('src/pages/NotFound/NotFound.jsx'))
+		return cached ?? (await caches.match('/offline.html'))
 	}
 }

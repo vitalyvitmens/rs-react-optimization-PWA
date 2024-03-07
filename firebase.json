@@ -1,11 +1,10 @@
 {
   "hosting": {
-    "site": "rickandmorty-c6ac8",
     "public": "build",
     "rewrites": [
       {
         "source": "**",
-        "destination": "/public/index.html"
+        "destination": "/index.html"
       }
     ],
     "ignore": [

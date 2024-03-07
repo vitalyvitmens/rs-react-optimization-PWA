@@ -1,6 +1,6 @@
 import { AuthProvider } from './context/AuthProvider'
 import { lazy } from 'react'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute'
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary'
 import styles from './app.module.css'
@@ -37,57 +37,55 @@ const NotFound = lazy(() =>
 export const App = () => {
 	return (
 		<div className={styles.App}>
-			<HashRouter>
-				<AuthProvider>
-					<Routes>
+			<AuthProvider>
+				<Routes>
+					<Route
+						element={
+							<ErrorBoundary>
+								<Navigation />
+							</ErrorBoundary>
+						}
+					>
+						<Route path="/" element={<Home />} />
 						<Route
+							path="/:category"
 							element={
-								<ErrorBoundary>
-									<Navigation />
-								</ErrorBoundary>
-							}
-						>
-							<Route path="/" element={<Home />} />
-							<Route
-								path="/:category"
-								element={
-									<PrivateRoute>
-										<ErrorBoundary>
-											<Category />
-										</ErrorBoundary>
-									</PrivateRoute>
-								}
-							/>
-							<Route
-								path="/:category/:id"
-								element={
-									<PrivateRoute>
-										<ErrorBoundary>
-											<Detail />
-										</ErrorBoundary>
-									</PrivateRoute>
-								}
-							/>
-							<Route
-								path="*"
-								element={
+								<PrivateRoute>
 									<ErrorBoundary>
-										<NotFound />
+										<Category />
 									</ErrorBoundary>
-								}
-							/>
-						</Route>
+								</PrivateRoute>
+							}
+						/>
 						<Route
-							path="/login"
+							path="/:category/:id"
+							element={
+								<PrivateRoute>
+									<ErrorBoundary>
+										<Detail />
+									</ErrorBoundary>
+								</PrivateRoute>
+							}
+						/>
+						<Route
+							path="*"
 							element={
 								<ErrorBoundary>
-									<Login />
+									<NotFound />
 								</ErrorBoundary>
 							}
 						/>
-					</Routes>
-				</AuthProvider>
-			</HashRouter>
+					</Route>
+					<Route
+						path="/login"
+						element={
+							<ErrorBoundary>
+								<Login />
+							</ErrorBoundary>
+						}
+					/>
+				</Routes>
+			</AuthProvider>
 		</div>
 	)
 }
