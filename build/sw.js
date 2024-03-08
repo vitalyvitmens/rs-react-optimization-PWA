@@ -3,12 +3,11 @@ const dynamicCacheName = 'dynamic-site'
 
 const ASSETS = [
 	'/',
-	'/index.html',
-	'/static/',
-	'src/index.css',
-	'src/app.module.css',
-	'src/index.js',
-	'src/App.js',
+	'/public/index.html',
+	'/src/index.css',
+	'/src/app.module.css',
+	'/src/index.js',
+	'/src/App.js',
 ]
 
 // install event
